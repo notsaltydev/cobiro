@@ -1,0 +1,18 @@
+<div class="container">
+    <div *ngFor="let card of membersCards$ | async" class="row center">
+        <div class="col header">
+            <h2 class="title">{{card.getTitleGroup()}}</h2>
+        </div>
+        <div *ngFor="let item of card.getItems()" class="col">
+            <div class="card-container">
+                <app-image [image]="item.imageUrl" class="image"></app-image>
+                <div class="blocks">
+                    <span class="block title">{{item.block.title}}</span>
+                    <span class="block description">{{item.block.description}}</span>
+                    <a [href]="'mailto:'+ item.block.link" class="block link">{{item.block.link}}</a>
+                    <span class="block text">{{item.block.text}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

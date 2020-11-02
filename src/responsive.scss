@@ -1,0 +1,29 @@
+$breakpoints: (
+        xl: 1200px,
+        lg: 992px,
+        md: 768px,
+        sm: 576px,
+        xs: 0px,
+);
+
+@mixin min-media-query($mq-breakpoint, $mq-breakpoints: $breakpoints) {
+
+  @if map-has-key($mq-breakpoints, $mq-breakpoint) {
+    @media (min-width: #{map-get($mq-breakpoints, $mq-breakpoint)}) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin max-media-query($mq-breakpoint, $mq-breakpoints: $breakpoints) {
+
+  @if map-has-key($mq-breakpoints, $mq-breakpoint) {
+    @media (max-width: #{map-get($mq-breakpoints, $mq-breakpoint)}) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}

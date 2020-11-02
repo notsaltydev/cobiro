@@ -1,0 +1,42 @@
+@import "responsive";
+
+.container {
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include min-media-query('xl') {
+    max-width: 1140px;
+  }
+
+  @include max-media-query('lg') {
+    max-width: 960px;
+  }
+
+  @include max-media-query('md') {
+    max-width: 720px;
+  }
+
+  @include max-media-query('sm') {
+    max-width: 540px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -16px;
+  margin-left: -16px;
+}
+
+.col {
+  display: flex;
+  width: 100%;
+  flex-basis: 0;
+  flex-grow: 1;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+

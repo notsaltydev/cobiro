@@ -1,0 +1,61 @@
+@import "./src/variables";
+
+:host {
+  display: flex;
+  flex: 1;
+}
+
+.header {
+  flex: 0 0 100%;
+  max-width: 100%;
+  justify-content: center;
+  margin: 32px 0;
+
+  .title {
+    font-size: 32px;
+    font-weight: 700;
+  }
+}
+
+.card-container {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+
+  .image {
+    display: flex;
+    height: 350px;
+    width: 100%;
+  }
+
+  .blocks {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+  }
+
+  .block {
+    margin-bottom: 8px;
+
+    &:nth-child(2) {
+      margin-bottom: 24px;
+    }
+  }
+
+  .title {
+    color: $color-1;
+    font-weight: 700;
+  }
+
+  .description {
+    color: $color-3;
+  }
+
+  .link {
+    color: $color-2;
+  }
+
+  .text {
+    color: $color-3;
+  }
+}
