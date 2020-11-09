@@ -7,7 +7,7 @@
             <div class="card-container">
                 <app-image [image]="item.imageUrl" class="image"></app-image>
                 <div class="blocks">
-                    <span class="block title">{{item.block.title}}</span>
+                    <span (click)="increment()" class="block title">{{item.block.title}}</span>
                     <span class="block description">{{item.block.description}}</span>
                     <a [href]="'mailto:'+ item.block.link" class="block link">{{item.block.link}}</a>
                     <span class="block text">{{item.block.text}}</span>
